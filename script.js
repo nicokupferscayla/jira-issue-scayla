@@ -40,7 +40,9 @@ setTimeout(() => {
     -------   
    
     h3. Extra
-    * tested on version: 
+    * Observed on:
+      - environment: 
+      - version: 
    `;
   }
   if ( document.getElementById("summary").value === "") {
