@@ -30,15 +30,18 @@ setTimeout(() => {
   if ( document.getElementById("description").value === "" ) {
     document.getElementById("description").value = 
     `h3. Steps To Reproduce
-    *
+    * Go to ...
     h3. Expected Result
-    *
+    * ...
     h3. Actual Result
-    *
-    -------
+    * ...  
+   
+   
+    -------   
+   
     h3. Extra
     * tested on version: 
-    *`;
+   `;
   }
   if ( document.getElementById("summary").value === "") {
       document.getElementById("summary").value = "[FE / BE]"
