@@ -53,6 +53,9 @@ function runCode______scayla() {
 }
 
 function setTypeBug______scayla() {
+    var content_____scayla = document.querySelectorAll('#create-issue-dialog > .jira-dialog-content')[0];
+    content.style.opacity = 0.1;
+  
     document.querySelectorAll("#project-single-select > .icon")[0].click();
     setTimeout(() => {
       var projects = document.querySelectorAll('#all-projects > li');
@@ -105,7 +108,10 @@ h3. Extra
       if ( document.getElementById("summary").value === "") {
           document.getElementById("summary").value = "[FE / BE]"
       }
-      setTimeout(() => { jQuery('.aui-nav > li[data-mode="wysiwyg"] > a')[0].click();}, 600)
+      setTimeout(() => { 
+        jQuery('.aui-nav > li[data-mode="wysiwyg"] > a')[0].click();
+        content.style.opacity = 1;
+      }, 600)
     }, 1500);
   
 }
