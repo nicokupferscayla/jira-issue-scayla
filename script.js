@@ -54,7 +54,7 @@ function runCode______scayla() {
 
 function setTypeBug______scayla() {
     var content_____scayla = document.querySelectorAll('#create-issue-dialog > .jira-dialog-content')[0];
-    content.style.opacity = 0.1;
+    content_____scayla.style.opacity = 0.1;
   
     document.querySelectorAll("#project-single-select > .icon")[0].click();
     setTimeout(() => {
@@ -110,7 +110,7 @@ h3. Extra
       }
       setTimeout(() => { 
         jQuery('.aui-nav > li[data-mode="wysiwyg"] > a')[0].click();
-        content.style.opacity = 1;
+        content_____scayla.style.opacity = 1;
       }, 600)
     }, 1500);
   
