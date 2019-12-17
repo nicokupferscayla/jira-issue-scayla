@@ -17,7 +17,7 @@ if (window.location.href.match(jira______scayla)) {
 function runCode______scayla() {  
   if (!document.querySelectorAll("#create-issue-dialog").length) {
     check_check_check_check______scayla = setInterval(() => { 
-      if (document.querySelectorAll('#create_link').length) {      
+      if (document.querySelectorAll('#create-issue-dialog').length) {      
         document.getElementById('create_link').click();
         clearInterval(check_check_check_check______scayla);
         setTypeBug______scayla();
