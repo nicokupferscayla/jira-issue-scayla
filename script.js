@@ -68,8 +68,8 @@ h3. Actual Result
 
 h3. Extra
 * Observed on:
-  - environment: 
-  - version: 
+    - environment: 
+    - version: 
 `;
       }
       if ( document.getElementById("summary").value === "") {
