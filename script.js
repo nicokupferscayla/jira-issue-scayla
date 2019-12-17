@@ -17,7 +17,7 @@ function runCode______scayla() {
   var timeout = 0;
   
   // TODO: add an If that says you need to open the popup first.
-  if (!jQuery("#create-issue-dialog")) {
+  if (!document.querySelectorAll("#create-issue-dialog").length) {
     timeout = 2000;
     console.log('getting element create_link');
     console.log(jQuery('#create_link'))
