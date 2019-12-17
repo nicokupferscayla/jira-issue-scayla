@@ -19,12 +19,14 @@ if (window.location.href.match(jira______scayla)) {
 }
 
 function addButton_____scayla() {
-  document.body.innerHTML += 
-  '<button onclick="runCode______scayla()" id="scayla____add_bug">Bug Template</button>' +
-  '<style>#scayla____add_bug{z-index:10000000;position: fixed; top: 3px; right: 350px;' +
-  'background-color:#2684ff; display: inline-block; padding: 8px;color: #eee;border: 0;' +
-  'font-weight: bold;font-size: 13px;border-radius: 4px;}' +
-  '</style>';
+  var elem = document.createElement('button');
+  elem.onclick = runCode______scayla;
+  elem.innerHTML = 'Bug Template';
+  elem.style.cssText =
+    'z-index:10000000;position: fixed; top: 3px; right: 350px;' +
+    'background-color:#2684ff; display: inline-block; padding: 8px;color: #eee;border: 0;' +
+    'font-weight: bold;font-size: 13px;border-radius: 4px';
+  document.body.appendChild(elem);
 }
 
 function isDialogOpen_____scayla() {
