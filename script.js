@@ -1,9 +1,13 @@
-document.body.innerHTML += 
+var jira______scayla = 'jira\.scayla\.com';
+
+if (window.location.href.match(jira______scayla)) {
+  document.body.innerHTML += 
   '<button onclick="runCode______scayla()" id="scayla____add_bug">Bug Template</button>' +
   '<style>#scayla____add_bug{z-index:10000000;position: fixed; top: 3px; right: 350px;' +
   'background-color:#549eff; display: inline-block; padding: 8px;color: #eee;border: 0;' +
   'font-weight: bold;font-size: 13px;border-radius: 4px;}' +
   '</style>';
+}
 
 
 /**
