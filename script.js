@@ -1,14 +1,20 @@
 var jira______scayla = 'jira\.scayla\.com';
 var check_check_check_check______scayla;
+var check_check_check_check2_____scayla;
 
 if (window.location.href.match(jira______scayla)) {
-  if (!document.querySelectorAll("#create-issue-dialog").length) {
+  if (!isDialogOpen_____scayla()) {
     addButton_____scayla();
   }
   else {
-    runCode______scayla()
+    runCode______scayla();
     
-    setTimeout(addButton_____scayla, 5 * 1000);
+    check_check_check_check2_____scayla = setInterval(() => {
+      if (!isDialogOpen_____scayla()) {
+        addButton_____scayla();
+        clearInterval(check_check_check_check2_____scayla);
+      }
+    }, 500);
   }
 }
 
@@ -21,15 +27,19 @@ function addButton_____scayla() {
   '</style>';
 }
 
+function isDialogOpen_____scayla() {
+  return document.querySelectorAll("#create-issue-dialog").length
+      && document.querySelectorAll("#project-single-select > .icon").length
+}
+
 /**
  * Runs the function that sets the template bug
  */
 function runCode______scayla() {  
-  if (!document.querySelectorAll("#create-issue-dialog").length) {
+  if (!isDialogOpen_____scayla()) {
     document.getElementById('create_link').click();
     check_check_check_check______scayla = setInterval(() => { 
-      if (document.querySelectorAll('#create-issue-dialog').length
-          && document.querySelectorAll("#project-single-select > .icon").length) {      
+      if (isDialogOpen_____scayla()) {      
         clearInterval(check_check_check_check______scayla);
         setTypeBug______scayla();
       }
