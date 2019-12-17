@@ -2,6 +2,17 @@ var jira______scayla = 'jira\.scayla\.com';
 var check_check_check_check______scayla;
 
 if (window.location.href.match(jira______scayla)) {
+  if (!document.querySelectorAll("#create-issue-dialog").length) {
+    addButton_____scayla();
+  }
+  else {
+    runCode______scayla()
+    
+    setTimeout(addButton_____scayla, 5 * 1000);
+  }
+}
+
+function addButton_____scayla() {
   document.body.innerHTML += 
   '<button onclick="runCode______scayla()" id="scayla____add_bug">Bug Template</button>' +
   '<style>#scayla____add_bug{z-index:10000000;position: fixed; top: 3px; right: 350px;' +
@@ -9,7 +20,6 @@ if (window.location.href.match(jira______scayla)) {
   'font-weight: bold;font-size: 13px;border-radius: 4px;}' +
   '</style>';
 }
-
 
 /**
  * Runs the function that sets the template bug
