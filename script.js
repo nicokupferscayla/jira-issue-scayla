@@ -1,4 +1,5 @@
 var jira______scayla = 'jira\.scayla\.com';
+var check_check_check_check______scayla;
 
 if (window.location.href.match(jira______scayla)) {
   document.body.innerHTML += 
@@ -13,19 +14,22 @@ if (window.location.href.match(jira______scayla)) {
 /**
  * Runs the function that sets the template bug
  */
-function runCode______scayla() {
-  var timeout = 0;
-  
-  // TODO: add an If that says you need to open the popup first.
+function runCode______scayla() {  
   if (!document.querySelectorAll("#create-issue-dialog").length) {
-    timeout = 2000;
-    console.log('getting element create_link');
-    console.log(jQuery('#create_link'))
-    console.log(document.getElementById('create_link'))
-    document.getElementById('create_link').click()
+    check_check_check_check______scayla = setInterval(() => { 
+      if (document.querySelectorAll('#create_link').length) {      
+        document.getElementById('create_link').click();
+        clearInterval(check_check_check_check______scayla);
+        setTypeBug______scayla();
+      }
+    }, 50)
+  } else {
+    setTypeBug______scayla();
   }
   
-  setTimeout(() => {
+}
+
+function setTypeBug______scayla() {
     document.querySelectorAll("#project-single-select > .icon")[0].click();
     setTimeout(() => {
       var projects = document.querySelectorAll('#all-projects > li');
@@ -80,6 +84,5 @@ h3. Extra
       }
       setTimeout(() => { jQuery('.aui-nav > li[data-mode="wysiwyg"] > a')[0].click();}, 600)
     }, 1500);
-  }, timeout);
   
 }
