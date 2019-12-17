@@ -18,7 +18,8 @@ function runCode______scayla() {
   if (!document.querySelectorAll("#create-issue-dialog").length) {
     document.getElementById('create_link').click();
     check_check_check_check______scayla = setInterval(() => { 
-      if (document.querySelectorAll('#create-issue-dialog').length) {      
+      if (document.querySelectorAll('#create-issue-dialog').length
+          && document.querySelectorAll("#project-single-select > .icon").length) {      
         clearInterval(check_check_check_check______scayla);
         setTypeBug______scayla();
       }
