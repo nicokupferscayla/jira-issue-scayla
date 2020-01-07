@@ -99,10 +99,10 @@ h3. Actual Result
 
 -------   
 
-h3. Extra
-* Observed on:
-    - environment: 
-    - version: 
+h3. Environment - any
+
+h3. Extra details
+* none
 `;
       }
       if ( document.getElementById("summary").value === "") {
