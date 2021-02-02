@@ -57,18 +57,18 @@ function setTypeBug______scayla() {
     content_____scayla.style.opacity = 0.1;
 
     document.querySelectorAll("#project-single-select > .icon")[0].click();
-    setTimeout(() => {
-        var projects = document.querySelectorAll('#all-projects > li');
-        for (var i = 0; i < projects.length; ++i) {
-            if (projects[i].id.match(/\(scayla\)/)) {
-                console.log(projects[i])
-                console.log('selecting project: ', projects[i].id);
-                projects[i].className += "active"
-                setTimeout(() => {projects[i].click();}, 100)
-                break;
-            }
-        }
-    }, 300)
+//     setTimeout(() => {
+//         var projects = document.querySelectorAll('#all-projects > li');
+//         for (var i = 0; i < projects.length; ++i) {
+//             if (projects[i].id.match(/\(scayla\)/)) {
+//                 console.log(projects[i])
+//                 console.log('selecting project: ', projects[i].id);
+//                 projects[i].className += "active"
+//                 setTimeout(() => {projects[i].click();}, 100)
+//                 break;
+//             }
+//         }
+//     }, 300)
     setTimeout(() => {
         document.querySelectorAll("#issuetype-single-select > .icon")[0].click();
         setTimeout(() => {
